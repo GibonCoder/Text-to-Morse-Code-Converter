@@ -1,9 +1,15 @@
-from converter import Converter
+from interface import Interface
 
-morse_code_converter = Converter()
+interface = Interface()
 
-message = input("Input message that will be converted into morse code: ")
-
-converted_message = morse_code_converter.text_to_morse_code(message)
-
-print(converted_message)
+while True:
+    action = int(input("""
+            What you want to do?
+            1 - Convert text to morse code
+            2 - Convert morse code to text
+            3 - Import your messages
+            0 - Exit program
+            
+            Action: 
+    """))
+    interface.choose_action(action)
