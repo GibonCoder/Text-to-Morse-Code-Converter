@@ -17,6 +17,7 @@ class Interface:
                 return True
             case 3:
                 print("Save your messages to an external file.")
+                self._converter.export_messages()
                 return True
             case 0:
                 print("Program Finished!")
