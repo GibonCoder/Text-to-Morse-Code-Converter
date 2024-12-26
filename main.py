@@ -12,6 +12,3 @@ while True:
             Action: """))
     if not interface.choose_action(action):
         break
-
-
-# TODO: Fix Interface choose_action to end after '0'
