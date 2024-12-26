@@ -1,4 +1,4 @@
-def append_messages(txt_msg, code_msg, arr: [], mode):
+def append_messages(txt_msg, code_msg, arr: [], mode: int):
     match mode:
         case 1:
             msgs_dict = {'Text message: ': txt_msg, 'Code message: ': code_msg}
