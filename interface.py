@@ -23,6 +23,7 @@ class Interface:
                 return False
             case _:
                 print("Unrecognized command, please try again.")
+                return True
 
     @staticmethod
     def _type_in_message(m_type: str):

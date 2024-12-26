@@ -17,13 +17,12 @@ class Converter:
 
     def morse_code_to_text(self, code: str) -> str:
         text_message = ''
-        if '/' not in code:
-            return 'You have to use / in order to separate characters!'
-        else:
-            code_arr = code.split('/')
-            for word in code_arr:
-                for char in word:
-                    for index, row in self._morse_code.iterrows():
-                        if char == row.CODE:
-                            text_message += row.CHARACTER + ' '
+        words_arr = code.split('/')
+        letters_arr = [word.split() for word in words_arr]
+        for word in letters_arr:
+            for char in word:
+                for index, row in self._morse_code.iterrows():
+                    if char == row.CODE:
+                        text_message += row.CHARACTER
+            text_message += ' '
         return text_message
