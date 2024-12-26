@@ -10,11 +10,14 @@ class Interface:
             case 1:
                 msg = self._type_in_message('morse code')
                 print(self._converter.text_to_morse_code(msg))
+                return True
             case 2:
                 msg = self._type_in_message('text')
                 print(self._converter.morse_code_to_text(msg))
+                return True
             case 3:
                 print("Save your messages to an external file.")
+                return True
             case 0:
                 print("Program Finished!")
                 return False
