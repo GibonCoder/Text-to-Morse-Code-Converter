@@ -33,4 +33,4 @@ class Converter:
         return text_message
 
     def export_messages(self):
-        save_to_file("messages.txt", self._msgs_arr)
+        save_to_file(self._msgs_arr)
