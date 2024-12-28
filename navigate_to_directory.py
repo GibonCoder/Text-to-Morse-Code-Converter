@@ -1,7 +1,8 @@
 import os
 
+
 def navigate_to_directory(start_path='.'):
-    print('Please select your directory where you would like to save the file.')
+    print('Please select directory where you would like to save the file.')
     current_path = os.path.abspath(start_path)
 
     while True:
@@ -33,6 +34,3 @@ def navigate_to_directory(start_path='.'):
                     print('Invalid choice. Please try again.')
             except ValueError:
                 print('Invalid input. Please enter a number.')
-
-
-
