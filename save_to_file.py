@@ -1,18 +1,20 @@
+import os
+from navigate_to_directory import navigate_to_directory
+
+
 def save_to_file(msg_arr):
-    directory = select_directory()
-    if not directory:
-        directory = 'messages.txt'
-    with open(directory, 'a+') as f:
-        for dictionary in msg_arr:
-            for key, value in dictionary.items():
-                f.write(f"{key}: {value}\n")
-            f.write('\n\n')
+    selected_dir = navigate_to_directory()
+    filename = define_file_name()
+    filepath = os.path.join(selected_dir, filename)
+    try:
+        with open(filepath, 'a+') as f:
+            for dictionary in msg_arr:
+                for key, value in dictionary.items():
+                    f.write(f"{key}: {value}\n")
+                f.write('\n\n')
+    except Exception as e:
+        print(f'Error saving file: {e}')
 
 
-def select_directory():
-    print("Please select your directory where you would like to save the file. Also at the end of provided directory specify file name. Otherwise. file localisation and its name "
-          "will be default")
-    direct = input("Provide directory to save file: ")
-    return direct
-
-#TODO: work on select_directory function to d desired directory instead of typing it in
+def define_file_name():
+    return input('Enter a filename (e.g., output.txt): ')
