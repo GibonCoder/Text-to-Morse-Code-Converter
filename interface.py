@@ -16,8 +16,8 @@ class Interface:
                 print(self._converter.morse_code_to_text(msg))
                 return True
             case 3:
-                print("Saved your messages to an external file.")
                 self._converter.export_messages()
+                print("Saved your messages to an external file.")
                 return True
             case 0:
                 print("Program Finished!")
