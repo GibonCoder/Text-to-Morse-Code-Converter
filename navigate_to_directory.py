@@ -14,6 +14,7 @@ def navigate_to_directory(start_path='.'):
         directories = [d for d in items if os.path.isdir(os.path.join(current_path, d))]
 
         for i, directory in enumerate(directories, start=1):
+            print(f'\n{i}. {directory}')
             print('0: Select this directory')
             print('-1: Go up one level')
             print('Position of a specific directory inside current directory: to the subdirectory')
@@ -34,3 +35,5 @@ def navigate_to_directory(start_path='.'):
                     print('Invalid choice. Please try again.')
             except ValueError:
                 print('Invalid input. Please enter a number.')
+
+# TODO: Work more on function to fix the bug
