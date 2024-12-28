@@ -1,3 +1,5 @@
+from colorama import Fore, Style
+
 from converter import Converter
 
 
@@ -17,15 +19,15 @@ class Interface:
                 return True
             case 3:
                 self._converter.export_messages()
-                print("Saved your messages to an external file.")
+                print(Fore.GREEN + "Saved your messages to an external file." + Style.RESET_ALL)
                 return True
             case 0:
-                print("Program Finished!")
+                print(Fore.BLUE + "Program Finished!" + Style.RESET_ALL)
                 return False
             case _:
-                print("Unrecognized command, please try again.")
+                print(Fore.RED + "Unrecognized command, please try again." + Style.RESET_ALL)
                 return True
 
     @staticmethod
     def _type_in_message(m_type: str):
-        return input(f"Type in message that will be converted into {m_type}: ")
+        return input(Fore.BLUE + f"Type in message that will be converted into {m_type}: " + Style.RESET_ALL)
