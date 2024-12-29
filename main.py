@@ -6,7 +6,7 @@ interface = Interface()
 
 while True:
     try:
-        action = int(input(Fore.MAGENTA + """What you want to do?
+        action = int(input(Fore.CYAN + """What you want to do?
                 1 - Convert text to morse code
                 2 - Convert morse code to text (please remember to separate each character with space and each word with /)
                 3 - Import your messages
@@ -14,7 +14,7 @@ while True:
                 
                 Action: """ + Style.RESET_ALL))
     except ValueError:
-        print('Invalid input. Please enter a number.')
+        print(Fore.RED + 'Invalid input. Please enter a number.' + Style.RESET_ALL)
     else:
         if not interface.choose_action(action):
             break

@@ -11,21 +11,21 @@ class Interface:
         match action:
             case 1:
                 msg = self._type_in_message('morse code')
-                print(self._converter.text_to_morse_code(msg))
+                print(Fore.LIGHTMAGENTA_EX + self._converter.text_to_morse_code(msg) + Style.RESET_ALL)
                 return True
             case 2:
                 msg = self._type_in_message('text')
-                print(self._converter.morse_code_to_text(msg))
+                print(Fore.LIGHTMAGENTA_EX + self._converter.morse_code_to_text(msg) + Style.RESET_ALL)
                 return True
             case 3:
                 self._converter.export_messages()
                 print(Fore.GREEN + "Saved your messages to an external file." + Style.RESET_ALL)
                 return True
             case 0:
-                print(Fore.BLUE + "Program Finished!" + Style.RESET_ALL)
+                print(Fore.CYAN + "Program Finished!" + Style.RESET_ALL)
                 return False
             case _:
-                print(Fore.RED + "Unrecognized command, please try again." + Style.RESET_ALL)
+                print(Fore.YELLOW + "Unrecognized command, please try again." + Style.RESET_ALL)
                 return True
 
     @staticmethod

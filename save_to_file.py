@@ -1,5 +1,6 @@
 import os
 from navigate_to_directory import navigate_to_directory
+from colorama import Fore, Style
 
 
 def save_to_file(msg_arr):
@@ -13,8 +14,8 @@ def save_to_file(msg_arr):
                     f.write(f"{key}: {value}\n")
                 f.write('\n\n')
     except Exception as e:
-        print(f'Error saving file: {e}')
+        print(Fore.RED + f'Error saving file: {e}' + Style.RESET_ALL)
 
 
 def define_file_name():
-    return input('Enter a filename (e.g., output.txt): ')
+    return input(Fore.BLUE + 'Enter a filename (e.g., output.txt). It can be an existing one, or you can name a fresh new file: ' + Style.RESET_ALL)
