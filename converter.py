@@ -1,11 +1,11 @@
 import pandas as pd
 from save_to_file import save_to_file
-from append_messages import append_messages
+from text_to_morse_code.code.append_messages import append_messages
 
 
 class Converter:
     def __init__(self):
-        self._morse_code = pd.read_csv('morse-code.csv', names=['CHARACTER', 'CODE'], header=None)
+        self._morse_code = pd.read_csv('../morse-code.csv', names=['CHARACTER', 'CODE'], header=None)
         self._msgs_arr = []
 
     def text_to_morse_code(self, text: str) -> str:

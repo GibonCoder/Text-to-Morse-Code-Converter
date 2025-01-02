@@ -1,6 +1,6 @@
 from colorama import Fore, Style
 
-from converter import Converter
+from text_to_morse_code.code.converter import Converter
 
 
 class Interface:
