@@ -48,3 +48,5 @@ class TestSaveToFile(unittest.TestCase):
 
 if __name__ == '__main':
     unittest.main()
+
+# Work on test_save_to_file_succes and test_save_to_file_exception functions
