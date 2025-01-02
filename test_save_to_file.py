@@ -38,3 +38,11 @@ class TestSaveToFile(unittest.TestCase):
             with self.assertLogs() as log:
                 save_to_file(test_msg_arr)
                 self.assertIn('Error saving file', log.output[0])
+
+    @patch('builtins.input', return_value='test.txt')
+    def test_define_file_name(self, mock_input):
+        result = define_file_name()
+        self.assertEqual(result, 'test.txt')
+        mock_input.assert_called_once_with('\033[34mEnter a filename (e.g., output.txt). It can be an existing one, or you can name a fresh new file: \033[0m')
+
+
