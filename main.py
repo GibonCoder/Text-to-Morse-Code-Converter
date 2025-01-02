@@ -1,6 +1,6 @@
 from colorama import Fore, Style
 
-from text_to_morse_code.code.interface import Interface
+from interface import Interface
 
 interface = Interface()
 

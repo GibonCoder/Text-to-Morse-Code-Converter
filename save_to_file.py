@@ -1,5 +1,5 @@
 import os
-from text_to_morse_code.code.navigate_to_directory import navigate_to_directory
+from navigate_to_directory import navigate_to_directory
 from colorama import Fore, Style
 
 
