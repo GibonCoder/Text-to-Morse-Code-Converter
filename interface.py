@@ -8,6 +8,15 @@ class Interface:
         self._converter = Converter()
 
     def choose_action(self, action: int):
+        """
+        Chooses what to do next
+
+        Parameters:
+            action (int): Number that user gives to decide what to do next
+
+        Returns:
+            boolean
+        """
         match action:
             case 1:
                 msg = self._type_in_message('morse code')
@@ -30,4 +39,13 @@ class Interface:
 
     @staticmethod
     def _type_in_message(m_type: str):
+        """
+        Gives user ability to type in message to convert
+
+        Parameters:
+            m_type (str): Type (tet or morse code) to which message will be converted
+
+        Returns:
+             input function
+        """
         return input(Fore.BLUE + f"Type in message that will be converted into {m_type}: " + Style.RESET_ALL)

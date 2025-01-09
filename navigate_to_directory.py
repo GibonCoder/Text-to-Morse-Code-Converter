@@ -3,6 +3,15 @@ from colorama import Fore, Style
 
 
 def navigate_to_directory(start_path='.'):
+    """
+    Allows user to navigate to desired directory
+
+    Parameters:
+        start_path ('.'): Current directory
+
+    Returns:
+        current_path: Directory that file will be saved in
+    """
     print(Fore.CYAN + 'Select directory where you would like to save the file.' + Style.RESET_ALL)
     current_path = os.path.abspath(start_path)
 

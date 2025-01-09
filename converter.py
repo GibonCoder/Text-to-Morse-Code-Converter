@@ -9,6 +9,15 @@ class Converter:
         self._msgs_arr = []
 
     def text_to_morse_code(self, text: str) -> str:
+        """
+        Converts text message into morse code
+
+        Parameters:
+            text (str): Message in readable format.
+
+        Returns:
+            morse_code_message (str): Message converted into morse code
+        """
         morse_code_message = ''
         for char in text.upper():
             if char == ' ':
@@ -20,6 +29,15 @@ class Converter:
         return morse_code_message
 
     def morse_code_to_text(self, code: str) -> str:
+        """
+                Converts morse code message into readable format.
+
+                Parameters:
+                    code (str): Message in morse code format.
+
+                Returns:
+                    text_message (str): Message converted into readable format
+                """
         text_message = ''
         words_arr = code.split('/')
         letters_arr = [word.split() for word in words_arr]
@@ -33,4 +51,7 @@ class Converter:
         return text_message
 
     def export_messages(self):
+        """
+        Exports messages in order to save in external file
+        """
         save_to_file(self._msgs_arr)
