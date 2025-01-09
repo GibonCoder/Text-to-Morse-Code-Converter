@@ -21,7 +21,7 @@ class Converter:
         morse_code_message = ''
         for char in text.upper():
             if char == ' ':
-                morse_code_message += ' / '
+                morse_code_message += '/ '
             for index, row in self._morse_code.iterrows():
                 if char == row.CHARACTER:
                     morse_code_message += row.CODE + ' '
