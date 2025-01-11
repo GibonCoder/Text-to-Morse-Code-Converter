@@ -54,4 +54,8 @@ class Converter:
         """
         Exports messages in order to save in external file
         """
-        save_to_file(self._msgs_arr)
+        if not self._msgs_arr:
+            return False
+        else:
+            save_to_file(self._msgs_arr)
+            return True

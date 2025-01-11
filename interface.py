@@ -27,8 +27,10 @@ class Interface:
                 print(Fore.LIGHTMAGENTA_EX + self._converter.morse_code_to_text(msg) + Style.RESET_ALL)
                 return True
             case 3:
-                self._converter.export_messages()
-                print(Fore.GREEN + "Saved your messages to an external file." + Style.RESET_ALL)
+                if self._converter.export_messages():
+                    print(Fore.GREEN + "Saved your messages to an external file." + Style.RESET_ALL)
+                else:
+                    print(Fore.RED + "You haven't converted any message yet. Please convert message first before proceeding to exporting them." + Style.RESET_ALL)
                 return True
             case 0:
                 print(Fore.CYAN + "Program Finished!" + Style.RESET_ALL)
