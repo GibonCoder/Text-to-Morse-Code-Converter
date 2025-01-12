@@ -17,5 +17,6 @@ class TestInterface(unittest.TestCase):
         self.assertEqual(self.interface._type_in_message('morse code'), 'test')
         self.assertEqual(self.interface._type_in_message('text'), '- . ... -')
 
+
 if __name__ == '__main__':
     unittest.main()
