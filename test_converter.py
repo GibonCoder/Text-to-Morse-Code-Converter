@@ -29,10 +29,17 @@ class TestConverter(unittest.TestCase):
         self.assertEqual(result_1, expected_1)
         self.assertEqual(result_2, expected_2)
 
-    @patch('builtins.input')
-    def test_export_messages(self, mock_input):
-        # TODO: Write test for export_messages function
-        mock_input.side_effect = []
+    # Test export_messages method
+    def test_export_messages_empty(self):
+        result = self.converter_1.export_messages()
+        expected = False
+        self.assertEqual(result, expected)
+
+    def test_export_messages(self):
+        self.converter_1.morse_code_to_text('.. / .- -- / -.-. --- -. ...- . .-. - . .-.')
+        result = self.converter_1.export_messages()
+        expected = True
+        self.assertEqual(result, expected)
 
 
 if __name__ == '__main__':
