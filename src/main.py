@@ -1,6 +1,6 @@
 from colorama import Fore, Style
 
-from interface import Interface
+from src.interface import Interface
 
 interface = Interface()
 

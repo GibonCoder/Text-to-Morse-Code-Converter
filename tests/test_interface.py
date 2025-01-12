@@ -1,7 +1,7 @@
 import unittest
-from interface import Interface
+from src.interface import Interface
 
-# Write tests for the interface module
+
 class TestInterface(unittest.TestCase):
     def setUp(self):
         self.interface = Interface()

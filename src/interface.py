@@ -1,6 +1,6 @@
 from colorama import Fore, Style
 
-from converter import Converter
+from src.converter import Converter
 
 
 class Interface:

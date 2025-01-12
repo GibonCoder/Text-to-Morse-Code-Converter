@@ -1,5 +1,5 @@
 import unittest
-from append_messages import append_messages
+from src.append_messages import append_messages
 
 
 class TestAppendMessages(unittest.TestCase):

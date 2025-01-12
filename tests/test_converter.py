@@ -1,6 +1,5 @@
 import unittest
-from unittest.mock import patch
-from converter import Converter
+from src.converter import Converter
 
 
 class TestConverter(unittest.TestCase):
