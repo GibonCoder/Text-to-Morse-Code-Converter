@@ -29,7 +29,6 @@ class TestConverter(unittest.TestCase):
         self.assertEqual(result_1, expected_1)
         self.assertEqual(result_2, expected_2)
 
-    # Test export_messages method
     def test_export_messages_empty(self):
         result = self.converter_1.export_messages()
         expected = False
