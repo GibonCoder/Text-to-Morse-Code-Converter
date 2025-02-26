@@ -9,19 +9,19 @@ This is a simple text to morse code converter. It takes a string of text and con
 
 ---
 ## Installation
-  1. Clone the repository
+  1. Clone the repository  
     ```
         git clone https://github.com/GibonCoder/Text-to-Morse-Code-Converter.git
         cd Text-to-Morse-Code-Converter
          ```
 
-  2. Install required dependencies
+  2. Install required dependencies  
     ```
         pip install -r requirements.txt
     ```
 ---
 ## Usage
-  Run the main script to start the converter application.
+  Run the main script to start the converter application.  
   ```
      python src/main.py
   ```
