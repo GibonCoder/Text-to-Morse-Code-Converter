@@ -1,5 +1,5 @@
 import os
-from src.navigate_to_directory import navigate_to_directory
+from navigate_to_directory import navigate_to_directory
 from colorama import Fore, Style
 
 
